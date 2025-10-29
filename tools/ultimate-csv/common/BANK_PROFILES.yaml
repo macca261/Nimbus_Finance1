@@ -1,0 +1,31 @@
+profiles:
+  sparkasse:
+    encoding: auto
+    delimiter: ';'
+    date_format: 'dd.MM.yyyy'
+    columns:
+      booking_date: 'Buchungstag'
+      value_date: 'Wertstellung'
+      amount: 'Betrag'
+      currency: 'Währung'
+      reference: 'Verwendungszweck'
+      counterparty_name: 'Empfänger/Zahlungspflichtiger'
+  dkb:
+    encoding: auto
+    delimiter: ';'
+    date_format: 'dd.MM.yyyy'
+    columns:
+      booking_date: 'Buchungstag'
+      value_date: 'Wertstellung'
+      amount: 'Betrag (EUR)'
+      reference: 'Verwendungszweck'
+  n26:
+    encoding: auto
+    delimiter: ','
+    date_format: 'yyyy-MM-dd'
+    columns:
+      booking_date: 'Date'
+      amount: 'Amount (EUR)'
+      reference: 'Merchant'
+
+

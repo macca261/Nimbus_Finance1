@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ultimate-csv"
+version = "0.1.0"
+description = "Minimal Python pipeline for ultimate-csv"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi==0.112.2",
+  "uvicorn==0.30.6",
+  "chardet==5.2.0",
+  "python-dateutil==2.9.0.post0",
+  "pydantic==2.9.2",
+  "PyYAML==6.0.2"
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest==8.3.3"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ultimate_csv*"]
+
+

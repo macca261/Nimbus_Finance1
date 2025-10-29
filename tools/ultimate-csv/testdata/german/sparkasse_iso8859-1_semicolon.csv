@@ -1,0 +1,6 @@
+Buchungstag;Wertstellung;Empfänger/Zahlungspflichtiger;Verwendungszweck;Betrag;Währung
+01.07.2024;01.07.2024;EDEKA;EDEKA FILIALE 123;−12,34;EUR
+02.07.2024;02.07.2024;DEUTSCHE BAHN;Ticket 123456;−29,00;EUR
+03.07.2024;03.07.2024;ACME GmbH;Gehalt Juli;1.234,56;EUR
+
+

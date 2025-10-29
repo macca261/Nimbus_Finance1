@@ -1,0 +1,23 @@
+bank_id: sample_bank
+encodings:
+  - utf8
+delimiters:
+  - ;
+decimal: ","
+thousand: .
+date_formats:
+  booking_date:
+    - dd.MM.yyyy
+headers:
+  booking_date:
+    - Buchungstag
+  amount:
+    - Betrag
+  currency:
+    - Währung
+rules:
+  invert_sign_if: []
+source:
+  provider: seed
+  repo: local
+  path: sample.csv

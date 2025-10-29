@@ -1,0 +1,29 @@
+rules:
+  - id: einkaufen
+    category: Einkaufen
+    ref: /(REWE|LIDL|ALDI|EDEKA|KAUFLAND|PENNY|HIT)/i
+  - id: transit
+    category: ÖPNV/Bahn
+    ref: /(DB|DEUTSCHE\s*BAHN|KVB|VRS)/i
+  - id: wohnen
+    category: Wohnen
+    subcategory: Miete
+    ref: /(MIETE|KALTMIETE|WARM|KVNR\s*MIETE)/i
+  - id: versicherungen
+    category: Versicherungen
+    ref: /(HAFTPFLICHT|HAUSRAT|KFZ|VERSICHERUNG|KRANKENKASSE|AOK|TK|DAK|ALLIANZ)/i
+  - id: abos
+    category: Abos
+    ref: /(SPOTIFY|NETFLIX|PRIME|ICLOUD|MICROSOFT|ADOBE)/i
+  - id: einkommen
+    category: Einkommen
+    subcategory: Gehalt
+    ref: /(GEHALT|LOHN|ENTGELT|PAYROLL|SALARY)/i
+  - id: lieferdienste
+    category: Essen & Lieferung
+    ref: /(UBER\s*\*?EATS|LIEFERANDO|WOLT)/i
+  - id: sonstiges
+    category: Sonstiges
+    ref: /.*/
+
+

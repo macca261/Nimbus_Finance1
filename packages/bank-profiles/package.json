@@ -1,0 +1,22 @@
+{
+  "name": "@nimbus/bank-profiles",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "nimbus-profiles-validate": "dist/cli/validate.js"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "validate": "node dist/cli/validate.js",
+    "test": "vitest run --passWithNoTests",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "yaml": "^2.5.0",
+    "zod": "^3.23.8"
+  }
+}
+
+

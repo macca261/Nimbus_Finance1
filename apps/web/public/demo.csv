@@ -1,0 +1,10 @@
+Buchungstag;Betrag;Währung;Verwendungszweck;IBAN
+01.02.2024;-59,30;EUR;Kartenzahlung REWE Köln;DE00XXXX
+03.02.2024;-80,50;EUR;Kartenzahlung LIDL Bonn;DE00XXXX
+05.02.2024;-60,00;EUR;Kartenzahlung ALDI Bonn;DE00XXXX
+07.02.2024;-120,00;EUR;Miete Wohnung;DE00XXXX
+10.02.2024;-29,99;EUR;Spotify Abo;DE00XXXX
+11.02.2024;-86,40;EUR;DB Tickets Köln;DE00XXXX
+25.02.2024;2500,00;EUR;Gehalt ACME Payroll;DE00XXXX
+
+

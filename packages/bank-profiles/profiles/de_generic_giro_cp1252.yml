@@ -1,0 +1,23 @@
+bank_id: de_generic_giro_cp1252
+encodings: ["windows-1252"]
+delimiters: [";"]
+decimal: ","
+thousand: "."
+date_formats:
+  booking_date: ["dd.MM.yyyy","dd.MM.yy","yyyy-MM-dd"]
+  value_date:   ["dd.MM.yyyy","dd.MM.yy","yyyy-MM-dd"]
+headers:
+  booking_date: ["Buchungstag"]
+  value_date: ["Wertstellung (Valuta)","Valuta"]
+  type: ["Vorgang"]
+  reference_raw: ["Buchungstext","Verwendungszweck","Beschreibung"]
+  amount: ["Umsatz in EUR","Betrag","Betrag (EUR)"]
+rules:
+  preamble_skip_until: "Buchungstag;Wertstellung"
+  invert_sign_if: []
+source:
+  provider: seed
+  repo: local
+  path: apps/web/public/fixtures/public/de_generic_giro_cp1252.csv
+
+

@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Ultimate CSV NDJSON schema",
+  "type": "object",
+  "properties": {
+    "booking_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "value_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "amount": { "type": "number" },
+    "currency": { "type": "string" },
+    "direction": { "type": "string", "enum": ["debit", "credit"] },
+    "counterparty_name": { "type": "string" },
+    "counterparty_iban": { "type": "string", "pattern": "^[A-Z0-9]+$" },
+    "reference": { "type": "string" },
+    "merchant_id": { "type": "string" },
+    "merchant_name": { "type": "string" },
+    "category": { "type": "string" },
+    "subcategory": { "type": "string" },
+    "account_id": { "type": "string" },
+    "source": { "type": "string", "enum": ["csv", "ais"] },
+    "raw_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "is_recurring": { "type": "boolean" },
+    "ingest_notes": { "type": "array", "items": { "type": "string" } }
+  },
+  "required": ["booking_date", "amount", "currency", "direction", "category", "account_id", "source", "raw_hash", "is_recurring", "ingest_notes"],
+  "additionalProperties": true
+}
+
+

@@ -1,0 +1,66 @@
+name: ultimate-csv CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        lang: [node, python]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        if: matrix.lang == 'node'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.11.1'
+      - name: Setup pnpm
+        if: matrix.lang == 'node'
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.12.1
+      - name: Install Node deps
+        if: matrix.lang == 'node'
+        run: |
+          cd tools/ultimate-csv/node
+          pnpm i
+      - name: Node typecheck + test
+        if: matrix.lang == 'node'
+        run: |
+          cd tools/ultimate-csv/node
+          pnpm run build
+          pnpm test
+      - name: Setup Python
+        if: matrix.lang == 'python'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Python deps
+        if: matrix.lang == 'python'
+        run: |
+          cd tools/ultimate-csv/python
+          pip install -U pip
+          pip install -e .[test]
+      - name: Python tests
+        if: matrix.lang == 'python'
+        run: |
+          cd tools/ultimate-csv/python
+          pytest -q
+  build-go-cpp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Go
+        run: |
+          cd tools/ultimate-csv/go
+          go build ./...
+      - name: Build C++
+        run: |
+          cd tools/ultimate-csv/cpp
+          mkdir -p build && cd build && cmake .. && make -j
+
+

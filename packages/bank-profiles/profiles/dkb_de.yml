@@ -1,0 +1,22 @@
+bank_id: dkb_de
+encodings: ["windows-1252", "utf8"]
+delimiters: [";"]
+decimal: ","
+thousand: "."
+date_formats:
+  booking_date: ["dd.MM.yyyy"]
+  value_date: ["dd.MM.yyyy"]
+headers:
+  booking_date: ["Buchungstag"]
+  value_date: ["Wertstellung"]
+  amount: ["Betrag (EUR)"]
+  reference_raw: ["Verwendungszweck"]
+  counterparty_iban: ["IBAN"]
+rules:
+  invert_sign_if: []
+source:
+  provider: seed
+  repo: local
+  path: apps/web/public/fixtures/public/dkb_de.csv
+
+

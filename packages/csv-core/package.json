@@ -1,0 +1,35 @@
+{
+  "name": "@nimbus/csv-core",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "parse": "node dist/cli/parse.js",
+    "test": "vitest run",
+    "lint": "eslint src --ext .ts"
+  },
+  "bin": {
+    "nimbus-parse": "dist/cli/parse.js"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.5",
+    "decimal.js": "^10.4.3",
+    "iconv-lite": "^0.6.3",
+    "jschardet": "^3.1.2",
+    "yaml": "^2.5.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "fast-check": "^3.17.1"
+  }
+}
+
+

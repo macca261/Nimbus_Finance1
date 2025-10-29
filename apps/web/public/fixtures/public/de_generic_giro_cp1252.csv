@@ -1,0 +1,9 @@
+Kontoauszug 2024
+Bank: Musterbank
+USt-IdNr: DE123456789
+
+Buchungstag;Wertstellung;Betrag (EUR);Buchungstext
+01.02.24;01.02.24;-66,99;Kartenzahlung REWE Köln
+02.02.24;02.02.24;2.500,00;Gehalt ACME Payroll
+
+

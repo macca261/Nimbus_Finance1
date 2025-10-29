@@ -1,0 +1,33 @@
+openapi: 3.0.0
+info:
+  title: Ultimate CSV Gateway
+  version: 1.0.0
+paths:
+  /healthz:
+    get:
+      responses:
+        '200': { description: OK }
+  /detect:
+    post:
+      requestBody:
+        required: true
+        content:
+          application/octet-stream:
+            schema: { type: string, format: binary }
+      responses:
+        '200': { description: Detection result JSON }
+  /ingest:
+    post:
+      parameters:
+        - in: query
+          name: lang
+          schema: { type: string, enum: [node, py, go, cpp] }
+      requestBody:
+        required: true
+        content:
+          application/octet-stream:
+            schema: { type: string, format: binary }
+      responses:
+        '200': { description: NDJSON stream }
+
+

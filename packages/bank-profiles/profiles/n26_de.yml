@@ -1,0 +1,23 @@
+bank_id: n26_de
+encodings: [utf8]
+delimiters: [";"]
+decimal: ","
+thousand: "."
+date_formats:
+  booking_date: ["yyyy-MM-dd", "dd.MM.yyyy"]
+  value_date: ["yyyy-MM-dd", "dd.MM.yyyy"]
+headers:
+  booking_date: ["Buchungstag", "booking date", "Datum"]
+  value_date: ["Valuta", "value date"]
+  amount: ["Betrag", "Amount"]
+  currency: ["Währung", "Currency"]
+  reference_raw: ["Verwendungszweck", "Beschreibung", "Text"]
+  counterparty_iban: ["IBAN", "Kontonummer"]
+rules:
+  invert_sign_if: ["Lastschrift"]
+source:
+  provider: seed
+  repo: local
+  path: apps/web/public/fixtures/public/n26_de.csv
+
+

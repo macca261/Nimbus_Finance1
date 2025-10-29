@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.venv/
+__pycache__/
+*.pyc
+*.log
+.mypy_cache/
+coverage/
+.pytest_cache/
+build/
+cmake-build*/
+.cache/
+*.gz
+*.ndjson
+.DS_Store
+
+

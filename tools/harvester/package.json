@@ -1,0 +1,19 @@
+{
+  "name": "@nimbus/harvester",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "nimbus-harvester": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "list": "node dist/cli.js list",
+    "run": "node dist/cli.js run",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "yaml": "^2.5.0"
+  }
+}
+
+

@@ -1,0 +1,20 @@
+bank_id: wise
+encodings: ["utf8"]
+delimiters: [","]
+decimal: "."
+thousand: ","
+date_formats:
+  booking_date: ["yyyy-MM-dd"]
+headers:
+  booking_date: ["Date"]
+  amount: ["Amount"]
+  currency: ["Currency"]
+  reference_raw: ["Description"]
+rules:
+  invert_sign_if: []
+source:
+  provider: seed
+  repo: local
+  path: apps/web/public/fixtures/public/wise.csv
+
+

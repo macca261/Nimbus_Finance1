@@ -1,0 +1,13 @@
+{
+  "name": "ultimate-csv-gateway",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "fastify": "4.26.2",
+    "undici": "6.19.8",
+    "rate-limiter-flexible": "2.5.3"
+  }
+}
+
+
